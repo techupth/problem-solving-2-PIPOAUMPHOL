@@ -1,7 +1,21 @@
 //Exercise 2: Fizz Buzz
 
 const fizzBuzz = function (n) {
-  //Start coding here
+  let sum = [];
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
+      sum.push(i);
+    } else if (i % 3 == 0 && i % 5 == 0) {
+      sum.push("FizzBizz");
+    } else if (i % 3 == 0) {
+      sum.push("Fizz");
+    } else if (i % 5 == 0) {
+      sum.push("Buzz");
+    }
+  }
+
+  return sum;
 };
 
 const result1 = fizzBuzz(3);
